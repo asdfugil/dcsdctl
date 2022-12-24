@@ -1,7 +1,7 @@
 CC ?= cc
 
-LIBS += -lusb-1.0 -lftdi1
-CFLAGS ?= -I/opt/homebrew/include -Wall -Wextra -Os
+LIBS += -lusb-1.0 -lftdi
+CFLAGS ?= -I/opt/homebrew/include/libftdi1 -Wall -Wextra -Os
 LDFLAGS ?= -L/opt/homebrew/lib
 
 PREFIX ?= /usr/local

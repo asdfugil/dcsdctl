@@ -3,7 +3,7 @@
 #include <sys/types.h>
 #include <signal.h>
 #include <string.h>
-#include <libftdi1/ftdi.h>
+#include <ftdi.h>
 #include <unistd.h>
 #include <ctype.h>
 
