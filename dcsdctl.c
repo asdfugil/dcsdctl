@@ -4,6 +4,7 @@
 #include <signal.h>
 #include <string.h>
 #include <ftdi.h>
+#include <errno.h>
 #include <unistd.h>
 #include <ctype.h>
 
@@ -43,7 +44,7 @@ int light_up(uint8_t led)
 
     if (fopen < 0)
     {
-        fprintf(stderr, "DCSD cable not found.\n");
+        fprintf(stderr, "Cannot open DCSD cable interface: %d: %s\n", errno, strerror(errno));
         return 1;
     }
 
