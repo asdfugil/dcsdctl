@@ -1,6 +1,11 @@
 CC ?= cc
 
-LIBS += -lusb-1.0 -lftdi
+LIBS += -lusb-1.0
+ifeq ($(shell sw_vers -productName 2> /dev/null),macOS)
+LIBS += -lftdi1
+else
+LIBS += -lftdi
+endif
 CFLAGS ?= -I/opt/homebrew/include/libftdi1 -Wall -Wextra -Os
 LDFLAGS ?= -L/opt/homebrew/lib
 
