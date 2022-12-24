@@ -1,0 +1,7 @@
+dcsdctl
+=======
+DCSD lights controller.
+
+Dependencies
+============
+libusb-1.0 and libFTDI
